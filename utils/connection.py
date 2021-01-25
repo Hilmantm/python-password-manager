@@ -25,5 +25,6 @@ class Connection:
         return connection, cursor
 
     def close_connection(self, connection, cursor):
-        connection.close()
-        cursor.close()
+        if connection.is_connected():
+            connection.close()
+            cursor.close()

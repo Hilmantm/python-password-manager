@@ -33,10 +33,10 @@ class FindCredentialWithEmail:
             select_credential = input("Choose number of credential or (q) for back: ").lower()
 
             if select_credential != self.ACTION_QUIT:
-                Wrapper.print_credential_data([find_email_result[int(select_credential) - 1]])
-
                 copy_credential = ""
+
                 while copy_credential != self.ACTION_QUIT:
+                    Wrapper.print_credential_data([find_email_result[int(select_credential) - 1]])
                     self.__showActionForCredential()
                     copy_credential = input("selected action: ").lower()
 
@@ -46,6 +46,6 @@ class FindCredentialWithEmail:
     def __run_user_choice(self, user_choice):
         if user_choice == self.ACTION_COPY_PASSWORD:
             pyperclip.copy('ini password saya')
-            print("password success to copy")
+            print("PASSWORD SUCCESS COPY TO CLIPBOARD 📋")
         elif user_choice == self.ACTION_SHOW_PASSWORD:
-            print("dummy password")
+            print("DUMMY PASSWORD")

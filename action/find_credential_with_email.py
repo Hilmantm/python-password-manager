@@ -12,10 +12,10 @@ class FindCredentialWithEmail:
         self.strings = strings
 
     def __showActionForCredential(self):
-        print("Choose action :")
-        print("1. copy password")
-        print("2. show password")
-        print("Q. exit")
+        print(self.strings.choose_action)
+        print(f"{self.ACTION_COPY_PASSWORD}. copy password")
+        print(f"{self.ACTION_SHOW_PASSWORD}. show password")
+        print(f"{self.strings.ACTION_QUIT.upper()}. exit")
 
     def execute(self):
         email = input(self.strings.ask_email)

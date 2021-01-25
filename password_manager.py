@@ -15,16 +15,16 @@ class PasswordManager:
         self.strings = Strings(self.config)
 
     def __showMenus(self):
-        print("Choose action :")
-        print("1. create new password")
-        print("2. find all sites and apps connected to an email")
-        print("3. find a password for a site or app")
-        print("Q. exit")
+        print(self.strings.choose_action)
+        print(f"{self.ACTION_CREATE_PASSWORD}. create new password")
+        print(f"{self.ACTION_FIND_WITH_EMAIL}. find all sites and apps connected to an email")
+        print(f"{self.ACTION_FIND_PASSWORD_FOR_SITE}. find a password for a site or app")
+        print(f"{self.strings.ACTION_QUIT.upper()}. exit")
 
     def execute(self):
-        print(f"Welcome in {self.strings.app_name}")
+        print(self.strings.welcome)
         # looping the choose action until user choose exit option
-        action_choose = ""
+        action_choose = self.strings.empty_string
         while action_choose != self.strings.ACTION_QUIT:
             self.__showMenus()
             action_choose = input(self.strings.ask_select_action).lower()

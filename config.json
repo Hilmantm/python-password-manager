@@ -1,0 +1,9 @@
+{
+  "app_name": "Password Manager",
+  "database": {
+    "host": "localhost",
+    "user": "root",
+    "password": "",
+    "database": "db_password_manager"
+  }
+}
